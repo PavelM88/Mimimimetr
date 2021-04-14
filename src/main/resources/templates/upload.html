@@ -1,0 +1,23 @@
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+
+<div>
+    <form method="POST" enctype="multipart/form-data" th:action="@{/upload}">
+        <tr>
+            <label>File to upload:</label>
+            <input type="file" name="file" class="form-control-file"/>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Upload"/></td>
+        </tr>
+        <label class="label" for="catName">Cat name</label>
+        <input  type="text" name="text" th:field="${cat.name}" id="catName"/>
+    </form>
+</div>
+
+</body>
+</html>
